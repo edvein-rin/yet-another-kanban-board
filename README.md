@@ -26,8 +26,8 @@ yarn build
 yarn start
 ```
 
-Server API is available at port `5000`.
-Server hosts client build (`client/build`) at`https://localhost:5000`.
+Server API is available at port `5000`.  
+Server hosts client build (`client/build`) at `https://localhost:5000`.
 
 ## Deploy
 
