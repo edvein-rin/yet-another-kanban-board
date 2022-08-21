@@ -17,7 +17,7 @@ cd client
 yarn start
 ```
 
-Client is available at port `https://localhost:3000`.
+Client is available at `https://localhost:3000`.
 
 ### Server:
 
@@ -25,6 +25,9 @@ Client is available at port `https://localhost:3000`.
 yarn build
 yarn start
 ```
+
+Server API is available at port `5000`.
+Server hosts client build (`client/build`) at`https://localhost:5000`.
 
 ## Deploy
 
