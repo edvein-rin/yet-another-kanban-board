@@ -31,6 +31,4 @@ Server hosts client build (`client/build`) at`https://localhost:5000`.
 
 ## Deploy
 
-```
-git push heroku master
-```
+Done automatically from the `main` branch.
