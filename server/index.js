@@ -1,4 +1,5 @@
 const express = require("express");
+const { Server } = require("ws");
 const morgan = require("morgan");
 const path = require("path");
 
@@ -27,4 +28,14 @@ app.get("/board/*", getBoard);
 
 app.get("*", function (_request, response) {
   response.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+});
+
+const webSocketsServer = new Server({ server: app });
+webSocketsServer.on("connection", (webSocket, request) => {
+  const ip = request.socket.remoteAddress;
+  console.log(`Client ${ip} connected`);
+
+  webSocket.on("message", (data) => console.log(`Message: ${data}`));
+
+  webSocket.on("close", () => console.log("Client disconnected"));
 });
